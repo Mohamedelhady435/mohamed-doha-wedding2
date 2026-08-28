@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Mohamed & Doha | Wedding Invitation</title>
+<meta name="description" content="Join Mohamed & Doha as they celebrate the beginning of their forever — 17 September 2026.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Mohamed & Doha | Wedding Invitation">
+<meta property="og:description" content="Join Mohamed & Doha as they celebrate the beginning of their forever — 17 September 2026.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/photo1.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mohamed & Doha | Wedding Invitation">
+<meta name="twitter:description" content="Join Mohamed & Doha as they celebrate the beginning of their forever — 17 September 2026.">
+
+<!-- Favicon (M&D monogram, inline SVG data URI) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230D0C0A'/%3E%3Ctext x='32' y='40' font-family='Georgia,serif' font-size='24' fill='%23C8AA73' text-anchor='middle'%3EM%26D%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Scroll progress indicator -->
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar" id="scrollBar"></div></div>
+
+<!-- Floating music control -->
+<button class="music-toggle" id="musicToggle" aria-label="Play wedding music" aria-pressed="false">
+  <span class="music-toggle__icon">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.3"/>
+    </svg>
+  </span>
+</button>
+<audio id="weddingAudio" loop preload="none">
+  <source src="assets/music/wedding.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ============ ENVELOPE / OPENING EXPERIENCE ============ -->
+<section class="envelope" id="envelope" aria-label="Wedding invitation opening screen">
+  <div class="envelope__grain" aria-hidden="true"></div>
+  <div class="envelope__glow" aria-hidden="true"></div>
+  <div class="envelope__content">
+    <div class="envelope__monogram" aria-hidden="true">
+      <svg viewBox="0 0 140 140" width="86" height="86">
+        <circle cx="70" cy="70" r="66" fill="none" stroke="#C8AA73" stroke-width="0.75"/>
+        <circle cx="70" cy="70" r="58" fill="none" stroke="#C8AA73" stroke-width="0.4"/>
+        <text x="70" y="83" text-anchor="middle" font-family="'Playfair Display', serif" font-size="40" fill="#F4EEE3">M&amp;D</text>
+      </svg>
+    </div>
+    <p class="envelope__eyebrow">You are cordially invited</p>
+    <h1 class="envelope__names">Mohamed <span class="envelope__amp">&amp;</span> Doha</h1>
+    <p class="envelope__date">17 September 2026</p>
+    <button class="btn btn--open" id="openInvitation">
+      <span>Open Invitation</span>
+    </button>
+  </div>
+  <div class="envelope__flap envelope__flap--top" aria-hidden="true"></div>
+  <div class="envelope__flap envelope__flap--bottom" aria-hidden="true"></div>
+</section>
+
+<!-- ============ MAIN SITE ============ -->
+<main id="site" class="site" aria-hidden="true">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__silhouette hero__silhouette--left"></div>
+      <div class="hero__silhouette hero__silhouette--right"></div>
+      <div class="hero__particles" id="heroParticles"></div>
+      <div class="hero__vignette"></div>
+    </div>
+
+    <div class="hero__content">
+      <p class="reveal hero__pretitle" data-reveal-order="1">Together with their families</p>
+
+      <div class="hero__monogram reveal" data-reveal-order="2" aria-hidden="true">
+        <svg viewBox="0 0 120 60" width="90" height="45">
+          <line x1="0" y1="30" x2="40" y2="30" stroke="#C8AA73" stroke-width="0.6"/>
+          <text x="60" y="40" text-anchor="middle" font-family="'Playfair Display', serif" font-size="30" fill="#C8AA73">M · D</text>
+          <line x1="80" y1="30" x2="120" y2="30" stroke="#C8AA73" stroke-width="0.6"/>
+        </svg>
+      </div>
+
+      <h1 class="hero__names">
+        <span class="reveal hero__name" data-reveal-order="3">Mohamed</span>
+        <span class="reveal hero__amp" data-reveal-order="4">&amp;</span>
+        <span class="reveal hero__name" data-reveal-order="5">Doha</span>
+      </h1>
+
+      <p class="reveal hero__invite" data-reveal-order="6">Invite you to celebrate<br>their wedding</p>
+
+      <p class="reveal hero__date" data-reveal-order="7">17 · 09 · 2026</p>
+
+      <div class="reveal hero__scroll" data-reveal-order="8" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-label">Scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOVE INTRODUCTION -->
+  <section class="intro" id="intro">
+    <div class="intro__inner">
+      <p class="eyebrow reveal-up" data-reveal>We're Getting Married</p>
+      <p class="intro__text reveal-up" data-reveal>
+        Together with their families, Mohamed &amp; Doha joyfully invite you
+        to celebrate the beginning of their beautiful new chapter.
+      </p>
+      <div class="divider reveal-up" data-reveal aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ROMANTIC QUOTE -->
+  <section class="quote" id="quote">
+    <div class="quote__overlay"></div>
+    <div class="quote__botanical" aria-hidden="true">
+      <svg viewBox="0 0 200 400" width="140" height="280">
+        <path d="M100 400 C 100 300, 60 260, 100 200 C 140 140, 100 100, 100 0" fill="none" stroke="#C8AA73" stroke-width="0.6"/>
+        <path d="M100 320 C 80 300, 60 300, 50 280" fill="none" stroke="#C8AA73" stroke-width="0.5"/>
+        <path d="M100 320 C 120 300, 140 300, 150 280" fill="none" stroke="#C8AA73" stroke-width="0.5"/>
+        <path d="M100 220 C 80 200, 60 200, 50 180" fill="none" stroke="#C8AA73" stroke-width="0.5"/>
+        <path d="M100 220 C 120 200, 140 200, 150 180" fill="none" stroke="#C8AA73" stroke-width="0.5"/>
+      </svg>
+    </div>
+    <blockquote class="quote__text reveal-up" data-reveal>
+      "I have found the one<br>whom my soul loves."
+      <cite class="quote__cite">— Song of Solomon 3:4</cite>
+    </blockquote>
+  </section>
+
+  <!-- WEDDING DETAILS -->
+  <section class="details" id="details">
+    <p class="eyebrow reveal-up" data-reveal>The Big Day</p>
+
+    <div class="details__grid">
+      <div class="details__item reveal-up" data-reveal data-highlight>
+        <span class="details__label">Date</span>
+        <span class="details__value">17 September 2026</span>
+        <span class="details__sub">Thursday</span>
+      </div>
+      <div class="details__divider" aria-hidden="true"></div>
+      <div class="details__item reveal-up" data-reveal data-highlight>
+        <span class="details__label">Time</span>
+        <span class="details__value">9:00 PM</span>
+        <span class="details__sub">Wedding Celebration</span>
+      </div>
+      <div class="details__divider" aria-hidden="true"></div>
+      <div class="details__item reveal-up" data-reveal data-highlight>
+        <span class="details__label">Venue</span>
+        <span class="details__value">Alf Leila We Leila</span>
+        <span class="details__sub details__sub--ar">قاعة ألف ليلة وليلة</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown" id="countdown">
+    <p class="eyebrow reveal-up" data-reveal>Counting Down</p>
+    <div class="countdown__grid" id="countdownGrid">
+      <div class="countdown__unit">
+        <span class="countdown__number" id="cd-days">00</span>
+        <span class="countdown__label">Days</span>
+      </div>
+      <div class="countdown__sep">·</div>
+      <div class="countdown__unit">
+        <span class="countdown__number" id="cd-hours">00</span>
+        <span class="countdown__label">Hours</span>
+      </div>
+      <div class="countdown__sep">·</div>
+      <div class="countdown__unit">
+        <span class="countdown__number" id="cd-minutes">00</span>
+        <span class="countdown__label">Minutes</span>
+      </div>
+      <div class="countdown__sep">·</div>
+      <div class="countdown__unit">
+        <span class="countdown__number" id="cd-seconds">00</span>
+        <span class="countdown__label">Seconds</span>
+      </div>
+    </div>
+    <p class="countdown__done" id="countdownDone" hidden>The Day Is Here</p>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location" id="location">
+    <div class="location__inner">
+      <p class="eyebrow reveal-up" data-reveal>The Celebration</p>
+      <p class="location__text reveal-up" data-reveal>
+        We can't wait to celebrate this special night with you.
+      </p>
+      <h2 class="location__venue reveal-up" data-reveal>Alf Leila We Leila</h2>
+      <p class="location__venue-ar reveal-up" data-reveal dir="rtl">قاعة ألف ليلة وليلة</p>
+
+      <div class="location__map reveal-up" data-reveal>
+        <div class="location__map-frame">
+          <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="200" fill="#15130F"/>
+            <g stroke="#C8AA73" stroke-opacity="0.25" stroke-width="0.5">
+              <line x1="0" y1="40" x2="400" y2="40"/>
+              <line x1="0" y1="90" x2="400" y2="90"/>
+              <line x1="0" y1="140" x2="400" y2="140"/>
+              <line x1="70" y1="0" x2="70" y2="200"/>
+              <line x1="170" y1="0" x2="170" y2="200"/>
+              <line x1="270" y1="0" x2="270" y2="200"/>
+              <line x1="330" y1="0" x2="330" y2="200"/>
+            </g>
+            <circle cx="200" cy="100" r="5" fill="#C8AA73"/>
+            <circle cx="200" cy="100" r="12" fill="none" stroke="#C8AA73" stroke-width="0.8">
+              <animate attributeName="r" values="10;22;10" dur="3.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.7;0;0.7" dur="3.5s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+        <a class="btn btn--outline" id="mapLink" href="https://maps.app.goo.gl/cg9nZTZxis5RkPzX8?g_st=ic" target="_blank" rel="noopener">
+          <span>Open in Google Maps</span>
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <p class="eyebrow reveal-up" data-reveal>A Few Moments</p>
+    <div class="gallery__grid">
+      <button class="gallery__item reveal-up" data-reveal data-src="assets/images/photo1.jpg" data-index="0" aria-label="Open photo 1">
+        <img src="assets/images/photo1.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('gallery__item--empty')">
+      </button>
+      <button class="gallery__item reveal-up" data-reveal data-src="assets/images/photo2.jpg" data-index="1" aria-label="Open photo 2">
+        <img src="assets/images/photo2.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('gallery__item--empty')">
+      </button>
+      <button class="gallery__item reveal-up" data-reveal data-src="assets/images/photo3.jpg" data-index="2" aria-label="Open photo 3">
+        <img src="assets/images/photo3.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('gallery__item--empty')">
+      </button>
+      <button class="gallery__item reveal-up" data-reveal data-src="assets/images/photo4.jpg" data-index="3" aria-label="Open photo 4">
+        <img src="assets/images/photo4.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('gallery__item--empty')">
+      </button>
+      <button class="gallery__item reveal-up" data-reveal data-src="assets/images/photo5.jpg" data-index="4" aria-label="Open photo 5">
+        <img src="assets/images/photo5.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('gallery__item--empty')">
+      </button>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close photo viewer">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next photo">›</button>
+  </div>
+
+  <!-- FINAL -->
+  <section class="final" id="final">
+    <div class="final__texture" aria-hidden="true"></div>
+    <div class="final__particles" id="finalParticles" aria-hidden="true"></div>
+    <div class="final__content">
+      <p class="reveal-up final__monogram" data-reveal>M&amp;D</p>
+      <h2 class="reveal-up final__thanks" data-reveal>Thank You</h2>
+      <p class="reveal-up final__line" data-reveal>For being part of our special day.</p>
+      <p class="reveal-up final__line" data-reveal>We can't wait to celebrate with you.</p>
+      <div class="reveal-up final__divider" data-reveal aria-hidden="true"></div>
+      <p class="reveal-up final__names" data-reveal>Mohamed &amp; Doha</p>
+      <p class="reveal-up final__date" data-reveal>17 · 09 · 2026</p>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
